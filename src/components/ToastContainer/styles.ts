@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
-export const Container = styled.div``;
-
-export const Toast = styled.div``;
+export const Container = styled.div`
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 30px;
+  overflow: hidden;
+`;
