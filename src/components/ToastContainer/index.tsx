@@ -2,7 +2,7 @@ import React from 'react';
 import { useTransition } from 'react-spring';
 
 import { Container } from './styles';
-import { IToastMessage, useToast } from '../../hooks/toast';
+import { IToastMessage } from '../../hooks/toast';
 import Toast from './Toast';
 
 interface IProps {
@@ -12,7 +12,7 @@ interface IProps {
 const ToastContainer: React.FC<IProps> = ({ messages }) => {
   const messagesWithTransitions = useTransition(
     messages,
-    (message) => message.id,
+    message => message.id,
     {
       from: { right: '-120%', opacity: 0 },
       enter: { right: '0%', opacity: 1 },
@@ -23,11 +23,7 @@ const ToastContainer: React.FC<IProps> = ({ messages }) => {
   return (
     <Container>
       {messagesWithTransitions.map(({ item, key, props }) => (
-        <Toast
-          key={key}
-          style={props}
-          message={item}
-        />
+        <Toast key={key} style={props} message={item} />
       ))}
     </Container>
   );

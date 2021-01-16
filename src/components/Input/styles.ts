@@ -23,21 +23,24 @@ export const Container = styled.div<ContainerProps>`
     margin-top: 8px;
   }
 
-  ${(props) => props.isErrored
-    && css`
-    border-color: #c53030;
-  `}
+  ${props =>
+    props.isErrored &&
+    css`
+      border-color: #c53030;
+    `}
 
-  ${(props) => props.isFocused
-    && css`
-    color: #ff9000;
-    border-color: #ff9000;
-  `}
+  ${props =>
+    props.isFocused &&
+    css`
+      color: #ff9000;
+      border-color: #ff9000;
+    `}
 
-  ${(props) => props.isFilled
-    && css`
-    color: #ff9000;
-  `}
+  ${props =>
+    props.isFilled &&
+    css`
+      color: #ff9000;
+    `}
 
 
 
@@ -45,15 +48,11 @@ export const Container = styled.div<ContainerProps>`
     background: transparent;
     flex: 1;
     border: 0;
-    color: #F4EDE8;
-
-
+    color: #f4ede8;
 
     &::placeholder {
       color: #666360;
     }
-
-
   }
 
   svg {
