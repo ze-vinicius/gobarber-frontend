@@ -18,7 +18,6 @@ export const Content = styled.div`
 
   width: 100%;
   max-width: 700px;
-
 `;
 
 const appearFromLeft = keyframes`
@@ -51,16 +50,15 @@ export const AnimationContainer = styled.div`
     }
 
     a {
-      color: #F4EDE8;
+      color: #f4ede8;
       display: block;
       margin-top: 24px;
       text-decoration: none;
-      transition: color 0.2s ;
+      transition: color 0.2s;
 
       &:hover {
         color: ${shade(0.2, '#F4EDE8')};
       }
-
     }
   }
 
@@ -69,11 +67,10 @@ export const AnimationContainer = styled.div`
     display: block;
     margin-top: 24px;
     text-decoration: none;
-    transition: color 0.2s ;
+    transition: color 0.2s;
 
     display: flex;
     align-items: center;
-
 
     &:hover {
       color: ${shade(0.2, '#ff9000')};
